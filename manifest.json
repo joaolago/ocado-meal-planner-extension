@@ -1,0 +1,31 @@
+{
+  "name": "Ocado Meal Planner",
+  "version": "0.1",
+  "description": "A Chrome extension proxy for Ocado.",
+  "permissions": [
+    "*://www.ocado.com/"
+  ],
+  "browser_action": {
+    "default_title": "Add To Cart",
+    "default_popup": "index.html"
+  },
+  "permissions": [
+    "*://*/*",
+    "*://ocado-test.s3.eu-central-1.amazonaws.com/*",
+    "storage",
+    "tabs"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": true
+  },
+  "externally_connectable": {
+    "matches": [
+      "*://localhost/*",
+      "*://ocado-test.s3.eu-central-1.amazonaws.com/*"
+    ]
+  },
+  "manifest_version": 2
+}
